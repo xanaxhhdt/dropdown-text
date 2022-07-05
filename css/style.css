@@ -6,4 +6,47 @@ body {
    line-height: 1.2;
    width: 100%;
    min-height: 100vh;
+   background-color: rgb(232, 232, 255);
+   display: flex;
+   justify-content: center;
+}
+
+.container {
+   padding: 30px;
+   max-width: 800px;
+}
+.box {
+   position: relative;
+   margin: 0px 0px 30px 0px;
+   user-select: none;
+}
+.label {
+   position: relative;
+   padding: 20px;
+   background-color: darkblue;
+   color: white;
+   cursor: pointer;
+}
+.box .label::after {
+   content: "+";
+   position: absolute;
+   top: 50%;
+   right: 20px;
+   transform: translateY(-50%);
+   font-size: 25px;
+   font-weight: 700;
+}
+.box.active .label::after {
+   content: "\2014";
+}
+.content {
+   position: relative;
+   background-color: white;
+   overflow: hidden;
+   max-height: 0;
+   transition: 0.3s;
+}
+
+.content > p {
+   padding: 20px;
 }
