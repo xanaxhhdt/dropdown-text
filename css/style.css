@@ -17,8 +17,10 @@ body {
 }
 .box {
    position: relative;
-   margin: 0px 0px 30px 0px;
    user-select: none;
+}
+.box:not(:last-child) {
+   margin: 0px 0px 20px 0px;
 }
 .label {
    position: relative;
